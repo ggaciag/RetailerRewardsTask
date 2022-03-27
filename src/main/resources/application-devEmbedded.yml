@@ -1,0 +1,11 @@
+spring:
+  mongodb:
+    embedded:
+      version: 4.2.18
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+  data:
+    mongodb:
+      port: 27097
+      database: retailer

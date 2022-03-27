@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: RetailRewardsTask
+  profiles:
+    active: devEmbedded
+
+server:
+  servlet:
+    context-path: /
+  port: 8080
+
+
+#We set old matcher so that swagger works
+spring.mvc.pathmatch.matching-strategy: ant_path_matcher
