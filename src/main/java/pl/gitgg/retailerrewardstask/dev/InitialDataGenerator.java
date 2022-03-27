@@ -1,16 +1,18 @@
 package pl.gitgg.retailerrewardstask.dev;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import pl.gitgg.retailerrewardstask.domain.transaction.Transaction;
 import pl.gitgg.retailerrewardstask.domain.transaction.TransactionRepository;
 
 import javax.annotation.PostConstruct;
-import java.math.BigDecimal;
 import java.util.List;
-import java.util.UUID;
-import java.util.stream.Stream;
 
 @Component
 @Profile("devEmbedded")
@@ -18,6 +20,12 @@ public class InitialDataGenerator {
 
     @Autowired
     private TransactionRepository transactionRepository;
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Value("classpath:data/transactions.json")
+    Resource transactionsResource;
 
     @PostConstruct
     public void createTestData() {
@@ -28,13 +36,10 @@ public class InitialDataGenerator {
 
     }
 
+    @SneakyThrows
     private List<Transaction> prepareTransactions() {
-        return Stream.of(
-            Transaction.builder()
-                    .id(UUID.randomUUID().toString())
-                    .value(new BigDecimal("100.45"))
-                    .build()
-        ).toList();
+        return objectMapper.readValue(transactionsResource.getFile(), new TypeReference<List<Transaction>>() {});
+
     }
 
 }

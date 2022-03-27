@@ -3,11 +3,16 @@ spring:
     name: RetailRewardsTask
   profiles:
     active: devEmbedded
+  mvc:
+    format:
+      date: iso
 
 server:
   servlet:
     context-path: /
   port: 8080
+  error:
+    include-stacktrace: never
 
 
 #We set old matcher so that swagger works

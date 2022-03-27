@@ -9,3 +9,9 @@ spring:
     mongodb:
       port: 27097
       database: retailer
+
+server:
+  error:
+    include-stacktrace: never
+    include-message: always
+
