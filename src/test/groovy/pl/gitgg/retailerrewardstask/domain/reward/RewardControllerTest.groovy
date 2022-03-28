@@ -2,7 +2,6 @@ package pl.gitgg.retailerrewardstask.domain.reward
 
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
-import pl.gitgg.retailerrewardstask.domain.common.Interval
 import pl.gitgg.retailerrewardstask.domain.reward.dto.Aggregation
 import pl.gitgg.retailerrewardstask.domain.transaction.Transaction
 import pl.gitgg.retailerrewardstask.domain.transaction.TransactionService
@@ -10,7 +9,7 @@ import spock.lang.Specification
 
 import java.time.LocalDate
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 

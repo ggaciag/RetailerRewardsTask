@@ -3,6 +3,7 @@ package pl.gitgg.retailerrewardstask.dev;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @Component
 @Profile({"devEmbedded", "dev"})
+@Log4j2
 public class InitialDataGenerator {
 
     @Autowired
@@ -29,6 +31,8 @@ public class InitialDataGenerator {
 
     @PostConstruct
     public void createTestData() {
+
+        log.warn("Populating database with fake data");
 
         transactionRepository.deleteAll();
 

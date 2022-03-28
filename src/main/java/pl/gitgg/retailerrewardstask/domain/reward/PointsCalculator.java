@@ -6,8 +6,6 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.List;
 
-import static java.lang.Math.min;
-
 @Component
 public class PointsCalculator {
 

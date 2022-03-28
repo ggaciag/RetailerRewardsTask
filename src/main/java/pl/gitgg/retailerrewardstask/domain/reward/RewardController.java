@@ -6,10 +6,9 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import pl.gitgg.retailerrewardstask.domain.reward.dto.Aggregation;
 import pl.gitgg.retailerrewardstask.domain.common.Interval;
+import pl.gitgg.retailerrewardstask.domain.reward.dto.Aggregation;
 import pl.gitgg.retailerrewardstask.domain.reward.dto.Reward;
-import pl.gitgg.retailerrewardstask.domain.transaction.TransactionDto;
 
 import java.time.LocalDate;
 import java.util.List;

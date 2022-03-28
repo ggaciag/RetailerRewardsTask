@@ -1,6 +1,5 @@
 
 #Running project
-
 ## Requirements
 - JDK 17 (developed with Amazon Corretto 17)
 - Project uses Lombok for code generation. If opened and run from IDE it might require additional plugins/settings. For intellij Idea that will be lombok plugin and enabling `Enable annotation processing`
@@ -26,3 +25,6 @@ Project is based on Spring boot + maven. It can be build using included `mvnw`
 ## API documentation
 After running, project have embedded swagger-ui available at: `http://localhost:8080/swagger-ui/` 
 
+## Test Data
+When project is run with profile `dev` or `devEmbedded`, on startup, database is populated with test data. Responsible for that is `InitialDataGenerator` component. 
+Transactions that are loaded can be changed by editing file `resources/data/transactions.json`
