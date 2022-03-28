@@ -30,7 +30,8 @@ public class SwaggerConfiguration {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.ant("/api/**"))
-                .build();
+                .build()
+                .useDefaultResponseMessages(false);
     }
 
     //This is a workaround for a bug causing swagger to fail with new spring.

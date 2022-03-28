@@ -15,7 +15,7 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Component
-@Profile("devEmbedded")
+@Profile({"devEmbedded", "dev"})
 public class InitialDataGenerator {
 
     @Autowired

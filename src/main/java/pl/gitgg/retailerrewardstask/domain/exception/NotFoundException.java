@@ -1,4 +1,4 @@
-package pl.gitgg.retailerrewardstask.domain.exceptions;
+package pl.gitgg.retailerrewardstask.domain.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

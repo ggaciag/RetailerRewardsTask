@@ -1,4 +1,4 @@
-package pl.gitgg.retailerrewardstask.domain.reward.dto;
+package pl.gitgg.retailerrewardstask.domain.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -7,5 +7,5 @@ spring:
       INDENT_OUTPUT: true
   data:
     mongodb:
-      port: 27097
+      port: 27099
       database: retailer
